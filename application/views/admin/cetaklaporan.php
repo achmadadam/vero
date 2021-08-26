@@ -4,7 +4,7 @@
 
     <div class="card shadow my-5">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary text-center">Daftar Penerima Lembur</h6>
+            <h6 class="m-0 font-weight-bold text-primary text-center">DAFTAR PENERIMA LEMBUR PT. ASMI <br><?= date("Y/m/d") ?></h6>
         </div>
 
 

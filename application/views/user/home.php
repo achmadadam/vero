@@ -29,15 +29,23 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($lembur as $lmb) : ?>
+                        <?php $rej = ''; foreach ($lembur as $lmb) : ?>
                             <tr>
+
+                            <?php
+                            
+                            if ($lmb['status_id'] == 3) {
+                                $rej = 'Alasan: ';
+                            }
+
+                            ?>
                                 <td><?= $lmb['name']; ?></td>
                                 <td><?= $lmb['date']; ?></td>
                                 <td><?= $lmb['divisi']; ?></td>
                                 <td><?= $lmb['jo']; ?></td>
                                 <td><?= $lmb['qty']; ?></td>
                                 <td><?= $lmb['time']; ?></td>
-                                <td><label class="badge <?= $lmb['warna_status']; ?>"><?= $lmb['nama_status']; ?></label> <br> <?= $lmb['reason_reject']; ?></td>
+                                <td><label class="badge <?= $lmb['warna_status']; ?>"><?= $lmb['nama_status']; ?></label> <br><?= $rej; echo $lmb['reason_reject']; ?></td>
                                 <td>
                                     <?php
                                     if ($lmb['status_id'] == 2 || $lmb['status_id'] == 3) {
